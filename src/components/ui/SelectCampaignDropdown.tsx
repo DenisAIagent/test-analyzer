@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { Check, ChevronDown, Search } from 'lucide-react';
-import { cn } from '../../lib/utils/cn';
+import { cn } from '../../lib/utils';
 import { Campaign } from '../../types/campaign';
 
 interface SelectCampaignDropdownProps {
@@ -112,7 +112,7 @@ const SelectCampaignDropdown: React.FC<SelectCampaignDropdownProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <DropdownMenu.Viewport className="p-1 max-h-[300px] overflow-y-auto">
+          <div className="p-1 max-h-[300px] overflow-y-auto">
             {filteredCampaigns.length === 0 ? (
               <div className="text-center py-6 text-sm text-gray-400">
                 Aucune campagne trouvée
@@ -145,7 +145,7 @@ const SelectCampaignDropdown: React.FC<SelectCampaignDropdownProps> = ({
                 </DropdownMenu.Item>
               ))
             )}
-          </DropdownMenu.Viewport>
+          </div>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>

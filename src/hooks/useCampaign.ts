@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, createContext } from 'react';
+import React, { useState, useEffect, useContext, createContext } from 'react';
 import { Campaign, CampaignDetails, TimeRange, getDateRangeFromTimeRange } from '../types/campaign';
 import { KPIData, KPIHistoryData, campaignTypeToKPI } from '../types/kpi';
 import { getCampaigns, getCampaignDetails } from '../api/google-ads/campaigns';

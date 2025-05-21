@@ -294,7 +294,9 @@ function calculateKPIValue(kpiType: KPIType, totals: Record<string, number>): nu
     case 'impression_share':
       return totals.search_impression_share * 100;
     case 'quality_score':
-      return results.length > 0 ? totals.historical_quality_score / results.length : 0;
+      // We need to determine the appropriate count for averaging
+      const count = totals.historical_quality_score > 0 ? Math.max(1, Object.keys(totals).length) : 1;
+      return totals.historical_quality_score / count;
     case 'impressions':
       return totals.impressions;
     case 'interactions':

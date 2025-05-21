@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart2, Settings, HelpCircle, FileText, DownloadCloud } from 'lucide-react';
-import { cn } from '../../lib/utils/cn';
+import { cn } from '../../lib/utils';
 import SelectCampaignDropdown from '../ui/SelectCampaignDropdown';
 import { useCampaign } from '../../hooks/useCampaign';
 import Button from '../ui/Button';

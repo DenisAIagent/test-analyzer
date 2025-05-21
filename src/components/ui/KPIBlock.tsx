@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, ArrowUp, ArrowRight, HelpCircle } from 'lucide-react';
-import { cn } from '../../lib/utils/cn';
+import { cn } from '../../lib/utils';
 import { KPIData, KPIType, kpiConfig } from '../../types/kpi';
 import { formatValue } from '../../lib/utils';
 import Card from './Card';
@@ -12,6 +12,7 @@ interface KPIBlockProps {
   showHelp?: boolean;
   showChange?: boolean;
   onClick?: () => void;
+  isLoading?: boolean;
 }
 
 const KPIBlock: React.FC<KPIBlockProps> = ({

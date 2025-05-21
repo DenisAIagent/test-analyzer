@@ -2,6 +2,12 @@ import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { KPIType, KPIConfig, kpiConfig } from '../types/kpi';
 import { API_CONSTANTS } from './constants';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 /**
  * Formate une valeur en fonction du type de KPI
