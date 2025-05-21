@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
   const { campaigns, selectedCampaign, selectCampaign, isLoading } = useCampaign();
 
   return (
-    <header className="fixed top-0 left-0 right-0 h-16 bg-background border-b border-gray-800 z-20 px-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 h-16 border-b border-gray-800 z-20 px-4 flex items-center justify-between" style={{ backgroundColor: '#000000' }}>
       <div className="flex items-center">
         <button
           className="p-2 rounded-md hover:bg-card mr-4 lg:hidden"

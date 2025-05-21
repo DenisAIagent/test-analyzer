@@ -13,7 +13,7 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-text">
+    <div className="min-h-screen text-white" style={{ backgroundColor: '#000000' }}>
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       

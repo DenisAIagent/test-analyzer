@@ -22,6 +22,7 @@ const KPIBlock: React.FC<KPIBlockProps> = ({
   showHelp = true,
   showChange = true,
   onClick,
+  isLoading = false,
 }) => {
   const { type, value, previousValue, changePercentage, trend } = data;
   const config = kpiConfig[type];

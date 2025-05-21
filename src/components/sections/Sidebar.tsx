@@ -36,6 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           'fixed left-0 top-0 bottom-0 w-64 bg-card border-r border-gray-800 pt-16 flex flex-col transition-transform duration-300 ease-in-out z-20',
           isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         )}
+        style={{ backgroundColor: '#2E2E2E' }}
       >
         <div className="p-4 border-b border-gray-800">
           <SelectCampaignDropdown

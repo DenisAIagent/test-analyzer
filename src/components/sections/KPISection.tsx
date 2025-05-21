@@ -32,7 +32,7 @@ const KPISection: React.FC = () => {
   const currentKpiData = kpiData[selectedTimeRange];
 
   return (
-    <div className="bg-background p-4 rounded-md animate-in fade-in-50">
+    <div className="p-4 rounded-md animate-in fade-in-50" style={{ backgroundColor: '#000000' }}>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-heading font-bold">Performance KPI</h2>
         <Button

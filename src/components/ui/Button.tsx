@@ -27,9 +27,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const getVariantClasses = () => {
       switch (variant) {
         case 'primary':
-          return 'bg-primary text-white hover:bg-opacity-90';
+          return 'text-white hover:bg-opacity-90';
         case 'secondary':
-          return 'bg-card text-white hover:bg-opacity-80';
+          return 'text-white hover:bg-opacity-80';
         case 'outline':
           return 'bg-transparent border border-primary text-primary hover:bg-primary hover:bg-opacity-10';
         case 'ghost':
@@ -37,7 +37,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         case 'link':
           return 'bg-transparent text-primary underline-offset-4 hover:underline p-0';
         default:
-          return 'bg-primary text-white hover:bg-opacity-90';
+          return 'text-white hover:bg-opacity-90';
       }
     };
 
@@ -64,6 +64,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           variant !== 'link' && 'shadow-sm',
           className
         )}
+        style={{ backgroundColor: variant === 'primary' ? '#E6232C' : variant === 'secondary' ? '#2E2E2E' : 'transparent' }}
         disabled={disabled || isLoading}
         {...props}
       >

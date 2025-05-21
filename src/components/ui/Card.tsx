@@ -11,13 +11,13 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     const getVariantClasses = () => {
       switch (variant) {
         case 'default':
-          return 'bg-card border-none';
+          return 'border-none';
         case 'outline':
           return 'bg-transparent border border-card';
         case 'elevated':
-          return 'bg-card shadow-lg';
+          return 'shadow-lg';
         default:
-          return 'bg-card border-none';
+          return 'border-none';
       }
     };
 
@@ -30,6 +30,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
           isLoading && 'animate-pulse',
           className
         )}
+        style={{ backgroundColor: variant !== 'outline' ? '#2E2E2E' : 'transparent' }}
         {...props}
       >
         {isLoading ? (
